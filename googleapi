@@ -1,0 +1,7 @@
+git clone https://github.com/pranavgit52/pythoncode-.git
+ cd pythoncode-
+rm -rf ~/pythoncode
+ls -l ai
+ls
+python3 ai
+
