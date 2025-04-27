@@ -1,0 +1,27 @@
+public class calculator {
+    public static void calculate(Integer a, Integer b) {
+        System.debug('First Number: ' + a);
+        System.debug('Second Number: ' + b);
+
+        Integer sum = a + b;
+        Integer diff = a - b;
+        Integer product = a * b;
+        Decimal quotient;
+
+        if (b != 0) {
+            quotient = Decimal.valueOf(a) / Decimal.valueOf(b);
+        } else {
+            quotient = null;
+        }
+
+        System.debug('Addition: ' + sum);
+        System.debug('Subtraction: ' + diff);
+        System.debug('Multiplication: ' + product);
+        if (quotient != null) {
+            System.debug('Division: ' + quotient);
+        } else {
+            System.debug('Division: Cannot divide by zero');
+        }
+    }
+
+}
