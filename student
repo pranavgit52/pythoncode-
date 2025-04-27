@@ -1,0 +1,21 @@
+public class cclab {
+public static void perinfo()
+{
+system.debug('***');
+system.debug('Student Details');
+system.debug('***');
+
+String n = 'Siddharth Oturkar';
+String b = 'Computer Engineering Department';
+
+String year = '3rd Year';
+String div = 'A';
+Integer roll = 15;
+
+system.debug('Name :'+ n);
+system.debug('Branch :'+ b);
+system.debug('Class :'+ year);
+system.debug('Division:'+div);
+system.debug('Roll No :'+ roll);
+}
+}
