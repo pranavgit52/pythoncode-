@@ -1,0 +1,19 @@
+public class Employeeinfo {
+    public static void empinfo(){
+        system.debug('**');
+        system.debug('Employee Details');
+        system.debug('**');
+        
+        string n='Akash Bhagare';
+        string d= 'computer';
+        string s='50000';
+        string r='developer';
+        string t='9am-5pm';
+        
+        system.debug('Name:'+n);
+        system.debug('Department:'+d);
+        system.debug('Sallary:'+s);
+        system.debug('Role in Company:'+r);
+        system.debug('Working Time:'+t);
+    }
+}
