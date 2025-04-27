@@ -1,0 +1,46 @@
+class NQueens:
+    def __init__(self, n):
+        self.n = n
+        self.board = [-1] * n  # Board representation: index is row, value is column
+
+    def is_safe(self, row, col):
+        """Check if a queen can be placed at (row, col)"""
+        for i in range(row):
+            if (self.board[i] == col or  # Same column
+                    abs(self.board[i] - col) == abs(i - row)):  # Diagonal attack
+                return False
+        return True
+
+    def solve_nqueens(self, row=0):
+        """Solve the N-Queens problem using backtracking"""
+        if row == self.n:
+            self.print_solution()
+            return True  # Stop at first solution
+
+        for col in range(self.n):
+            if self.is_safe(row, col):
+                self.board[row] = col
+                if self.solve_nqueens(row + 1):
+                    return True  # Found a solution, stop searching
+                self.board[row] = -1  # Backtrack
+
+        return False
+
+    def print_solution(self):
+        """Print the board configuration"""
+        for i in range(self.n):
+            row = ["."] * self.n
+            row[self.board[i]] = "Q"
+            print(" ".join(row))
+        print("\n")
+
+    def solve(self):
+        """Initiate the solving process"""
+        if not self.solve_nqueens():
+            print("No solution exists")
+
+
+# Example Usage
+n = 4  # Change this value for different board sizes
+solver = NQueens(n)
+solver.solve()
